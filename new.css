@@ -1,0 +1,381 @@
+/*Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+/*Genaral Style*/
+body{
+    font-family: 'Raleway', sans-serif;
+    margin:0;
+}
+*{
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+}
+.container{
+    max-width: 1300px;
+    margin:auto;
+}
+header{
+    position: absolute;
+    width:100%;
+    left:0;
+    top:0;
+    padding:15px;
+    z-index: 100;
+}
+header.sticky{
+    position: fixed;
+    background-color: #333333;
+    animation: header .5s ease;
+}
+@keyframes header{
+    0%{transform: translateY(-100);opacity: 0;}
+    100%{transform: translateY(0)}
+}
+header .logo{
+    float: left;
+    
+}
+header .logo a{
+    font-size: 35px;
+    display: inline-block;
+    padding: 5px 0;
+    color:white;
+    font-weight: 600;
+    letter-spacing: 2px;
+
+}
+header .logo a span{
+    color: #ffa500;
+    font-weight: bold;
+}
+header .navbar ul {
+    list-style: none;
+    padding: 0;
+    margin:0;
+
+}
+header .navbar{
+    float: right;
+    margin-right: 10px;
+}
+header .navbar ul li {
+    display: inline;
+    padding: 0 15px;
+}
+header .navbar ul li a{
+    display: inline-block;
+    padding: 10px 0;
+    color: white;
+    font-size: 16px;
+    text-transform: Uppercase;
+    position: relative;
+
+}
+header .navbar ul li a::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    width: 0;
+    margin-top: -5px;
+    height: 2px;
+    left: 0px;
+    background-color: #f3971b;
+    transition: width 0.5s ease;
+}
+header .navbar ul li a.active::before{
+    width: 100%;
+}
+header .navbar ul li a:hover::before{
+    width: 100%;
+}
+.home {
+    min-height: 100vh;
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.25)), url(../port/6.jpg);
+    background-size: cover;
+    background-position: center;
+    float: left;
+    width:100%;
+    position: relative;
+}
+.home::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    opacity:0.7;
+
+}
+.home .home-text{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: auto;
+    z-index: 10;
+}
+.home .home-text h1{
+    font-size: 35px;
+    color:#ffff;
+    margin-top: 10px 0;
+    font-weight: 400;
+    animation: slideLeft 1.5s ease;
+}
+.home .home-text h2 {
+    font-size: 35px;
+    color: #f3971b;
+    margin-top: 15px 0 0;
+    font-weight: 700; 
+    animation: slideRight 1.5s ease;
+}
+@keyframes slideLeft {
+    0%{transform: translateY(-100%);opacity:0}
+    100%{transform: translateY(0);opacity:1}
+}
+@keyframes slideRight {
+    0%{transform: translateY(100%);opacity:0}
+    100%{transform: translateY(0);opacity:1}
+}
+/* font awesome icones */
+/*@import url ('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');*/
+html{
+    scroll-behavior: smooth;
+}
+
+.about{
+    float: left;
+    width: 100%;
+    padding: 80px 0;
+    background-color: #292929;
+}
+h2.title{
+    font-size: 30px;
+    font-weight: 600;
+    margin: 0;
+    padding-bottom: 70px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #f3971b;
+    position: relative;
+    letter-spacing: .5px;
+}
+h2.title::before{
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 2px;
+    margin-left: -40px;
+    left: 50%;
+    top: 40px;
+    background-color: #f3971b;
+}
+.about .about-content{
+    width: 100%;
+    float: left;
+}
+.about .about-content .img{
+    float: left;
+    width: 35%;
+    padding: 15px;
+}
+
+.about .about-content .img img{
+    width: 100%;
+    border: 5px solid #3c3c3c;
+    border-radius: 15px;
+}
+.about .about-content .description {
+    float: left;
+    width: 65%;
+    padding: 15px;
+}
+.about .about-content .description h3{
+    font-size: 20px;
+    color: #ffffff;
+    margin: 0;
+    padding-bottom: 10px;
+    font-weight: 400;
+
+}
+.about .about-content .description h4{
+    font-size: 25px;
+    color: #ffffff;
+    margin: 0;
+    padding-bottom: 10px;
+    font-weight: 600;
+}
+.about .about-content .description p{
+    color: #c2c0c3;
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+.about .about-content .description p {
+    margin-right: 10px;
+    margin-top: 20px;
+}
+.btn-bg{
+    padding: 12px 40px;
+    border-radius: 0;
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 400;
+    background-color: #f3971b;
+    border: 1px solid transparent;
+    letter-spacing: .5px;
+    cursor: pointer;
+    transition: all .5s ease;
+
+}
+.btn-bg:hover{
+    border:1px solid #f3971b;
+    color: #f3971b;
+    background-color: transparent; 
+}
+.btn-light{
+    padding: 12px 40px;
+    border-radius: 0;
+    font-size: 16px;
+    color: #f3971b;
+    background-color: transparent;
+    font-weight: 400;
+    border:1px solid #f3971b;
+    letter-spacing: .5px;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+.btn-light:hover{
+    color: #ffffff;
+    background-color: #f3971b;
+}
+/* section Skills*/
+.skills{
+    float: left;
+    width: 100%;
+    padding: 80px 0;
+    background-color: #3c3c3c;
+}
+.skills .skills-content{
+    float: left;
+    width: 100%;
+}
+.skills .skills-content .card{
+    width: 50%;
+    float: left;
+    padding: 0px 15px;
+    margin-bottom: 50px;
+}
+
+
+.skills .skills-content .card label{
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 600;
+    display: block;
+    text-align: left;
+    margin: 15px 0;
+  
+    
+   
+}
+.skills .skills-content .card .progress{
+    height: 12px;
+    width: 100%;
+    border-radius: 4px;
+    background-color: #292929;
+    position: relative;
+    padding-top: 5px;
+}
+.skills .skills-content .card .progress .inner{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: #f3971b;
+    border-radius: 4px;
+    
+}
+.skills .skills-content .card .progress::before{
+    content: attr(data-text);
+    position:absolute;
+    right: 0;
+    top: 20px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+}
+/*Contact*/
+footer{
+    float:left;
+    width: 100%;
+    background-color: #292929;
+    padding: 50px 0;
+}
+footer .footer-content {
+    float: left;
+    width: 100%;
+}
+footer .social-links {
+    float: left;
+    width: 100%;
+    text-align: center;
+    border: 1px solid #353535;
+    padding-top: 15px;
+}
+footer .social-links ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+footer .social-links ul li{
+    display: inline;
+}
+footer .social-links ul li a{
+    display: inline-block;
+    padding: 15px 15px;
+}
+footer .social-links ul li a span{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border:1px solid #f3971b;
+    color: #f3971b;
+    text-align: center;
+    line-height: 40px;
+    font-size: 16px;
+    transition: all .5s ease;
+}
+footer .social-links ul li a span:hover{
+    background-color: #f3971b;
+    color: #ffffff;
+}
+footer .footer-content .box{
+    width: 33.33%;
+    float: left;
+    padding: 15px;
+    text-align: center;
+}
+footer .footer-content .box .icon span{
+    color: #f3971b;
+    font-size: 30px;
+}
+footer .footer-content .box h4{
+    font-size: 15px;
+    color: #ffffff;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 20px 0;
+}
+footer .footer-content .box p{
+    color: #c2c0c3;
+    line-height: 16px;
+    letter-spacing: .5px;
+    text-align: center;
+    font-weight: 400;
+    padding: 10px 0;
+    margin: 0;
+}

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Portfolio</title>
+        <meta name="wievport" content="width=divice-width, initial-scale=1">
+        <link rel="stylesheet" href="new.css" type="text/css">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    </head>
+    <body>
+       <!---Start Header-->
+       <header>
+       <div class="container">
+           <div class="logo">
+               <a href=""><span>D</span>ev<span>S</span>ardor</a>
+           </div>
+           <div class="navbar">
+               <ul>
+                   <li><a href="#home" class="active">Home</a></li>
+                   <li><a href="#about">About</a></li>
+                   <li><a href="#skills">Skills</a></li>
+                   <li><a href="#contact">Contact</a></li>
+               </ul>
+           </div> 
+       </div>
+       </header>
+       <!--End Header--> 
+       <!--Start Home-->
+       <section class="home" id="home">
+           <div class="container">
+               <div class="home-text">
+                   <h1>Hi, I`m Sardor Ergashev</h1>
+                   <h2>Full Stack Developer</h2>
+
+               </div>
+           </div>
+       </section>
+       <!--End Home-->
+       <!--Start About-->
+         <section class="about" id="about">
+             <div class="container">
+                 <h2 class="title">About Me</h2>
+                 <div class="about-content">
+                 <div class="img">
+                     <img src="C:\Users\user\Desktop\websites\port\about.jpg" alt="Me">
+                 </div>
+                 <div class="description">
+                     <h3>Hi, I`m Sardor Ergashev</h3>
+                     <h4>Fullstack Developer in Uzbekistan</h4>
+                     <p> I am a citizen of Uzbekistan and an international student in South Korea! I love IT world, to be honest, choosing this major will give me a great 
+                         opportunity for future career. I can see myself in this IT world in future! </p>
+                      <button type="button" class="btn-bg">Download CV</button>
+                      <button type="button" class="btn-light">Hire ME</button>
+                    </div>
+                 </div>
+             </div>
+         </section>
+       <!--End About-->
+       <!--Start Skills-->
+       <section class="skills" id="skills">
+           <div class="container">
+               <h2 class="title">Skills</h2>
+               <div class="skills-content">
+                    <div class="card">
+                        <div class="progress" data-text="70%">
+                           <label>HTML</label>
+                            <div class="inner"  style="width: 70%">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="progress" data-text="80%">
+                           <label>CSS</label>
+                            <div class="inner" style="width: 80%">
+                            </div>
+                        </div>
+                     </div>
+                     <div class="card">
+                        <div class="progress" data-text="85%">
+                           <label>Javascript</label>
+                            <div class="inner"  style="width: 75%">
+                            </div>
+                        </div>
+                     </div>
+                     <div class="card">
+                        <div class="progress"  data-text="85%">
+                           <label>React</label>
+                            <div class="inner" style="width: 85%">
+                            </div>
+                        </div>
+                     </div>
+                     <div class="card">
+                        <div class="progress" data-text="65%">
+                           <label>Mongo DB</label>
+                            <div class="inner" style="width: 65%">
+                            </div>
+                        </div>
+                     </div>
+                     <div class="card">
+                        <div class="progress"data-text="70%">
+                           <label>Express</label>
+                            <div class="inner"  style="width: 70%">
+                            </div>
+                        </div>
+                     </div>
+                     <div class="card">
+                        <div class="progress" data-text="65%">
+                           <label>Node JS</label>
+                            <div class="inner" style="width: 65%">
+                            </div>
+                        </div>
+                     </div>
+                     <div class="card">
+                        <div class="progress" data-text="70%">
+                           <label>RHCSA</label>
+                            <div class="inner"  style="width: 70%">
+                            </div>
+                        </div>
+                     </div>
+                     
+               </div>
+           </div>
+           </section>
+       <!--End Skills-->
+       <!--Start Contact-->
+       <footer class="footer" id="contact">
+           <div class="container">
+               <h2 class="title">Contact</h2>
+               <div class="footer-content">
+                   <div class="box">
+                       <div class="icon">
+                           <span class="fa fa-phone"></span>
+                       </div>
+                       <h4>Phone</h4>
+                       <p>+998976808804</p>
+                    </div>
+                   <div class="box">
+                    <div class="icon">
+                        <span class="fa fa-envelope"></span>
+                    </div>
+                    <h4>Email</h4>
+                    <p> sergashev8804@gmail.com </p>
+                </div>
+                <div class="box">
+                    <div class="icon">
+                        <span class="fa fa-map-marker"></span>
+                    </div>
+                    <h4>Location</h4>
+                    <p>Namangan, Uzbekistan</p> 
+                </div>
+               </div>
+               <div class="social-links">
+                   <ul>
+                       <li><a href=""><span class="fa fa-facebook"></span></a></li>
+                       <li><a href=""><span class="fa fa-instagram"></span></a></li>
+                       <li><a href=""><span class="fa fa-linkedin"></span></a></li>
+                   </ul>
+               </div>
+           </div>
+       </footer>
+       <!--End Contact-->
+    <!--Jquery code-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            var bottom=$("header").outerHeight();
+            var header=$("header").offset().top + bottom;
+             console.log(bottom)
+             console.log(header)
+         $(window).scroll(function(){
+             if($(window).scrollTop()>=header){
+                 $("header").addClass("sticky")
+             }
+             else{
+                 $("header").removeClass("sticky")
+             }
+         })
+         //navbar active link
+         $(".navbar ul li a").click(function(){
+             $(".navbar ul li a").removeClass("active")
+             $(this).addClass("active");
+         })   
+        })
+    </script>
+    </body>
+</html>
